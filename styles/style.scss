@@ -1,0 +1,117 @@
+$header1: 2.5rem;
+$header2: 4rem;
+$header3: 2.5rem;
+$header4: 2rem;
+$text: 2.5rem;
+$gradient: linear-gradient(left, #38d39f, #38a4d3);
+$background-color: #154353;
+$gray-text: #2c2c2c;
+
+@mixin flex($direction, $align, $justify) {
+  display: flex;
+  flex-direction: $direction;
+  align-items: $align;
+  justify-content: $justify;
+}
+
+@import "global";
+@import "intro";
+@import "projects";
+@import "contact";
+@import "footer";
+
+@media screen and (max-width: 1332px) {
+  html {
+    font-size: 53%;
+  }
+
+  .splash {
+    display: none;
+  }
+
+  .intro-text {
+    flex: 1 1 40rem;
+  }
+
+  .intro-images {
+    flex: 1 1 40rem;
+  }
+
+  svg {
+    width: 100%;
+  }
+
+  nav {
+    width: 100%;
+  }
+
+  .beatmaker {
+    img {
+      width: 680px;
+    }
+  }
+}
+
+@media screen and (max-width: 754px) {
+  html {
+    font-size: 45%;
+  }
+  svg {
+    height: 60%;
+    width: 80%;
+  }
+  .main-head {
+    width: 100%;
+  }
+  nav {
+    .logo {
+      @include flex(column, center, center);
+      flex: 1 1 40rem;
+      margin-top: 2rem;
+    }
+    ul {
+      flex: 1 1 80rem;
+      margin: 2rem 0rem;
+    }
+  }
+  .intro-text {
+    margin-top: 5rem;
+    text-align: center;
+  }
+  .intro-images {
+    margin-top: 2rem;
+    text-align: center;
+  }
+  .intro-social a:nth-child(1) {
+    padding-left: 6rem;
+  }
+
+  .travelly,
+  .elena,
+  .todo,
+  .beatmaker {
+    flex: 1 1 50rem;
+    img {
+      width: 100%;
+    }
+  }
+
+  .icons {
+    width: 100%;
+  }
+
+  .phone,
+  .email {
+    margin: 4rem auto;
+  }
+
+  .form {
+    width: 100%;
+    input {
+      width: 30rem;
+    }
+    textarea {
+      width: 100%;
+    }
+  }
+}
