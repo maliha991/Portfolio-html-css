@@ -1,0 +1,22 @@
+.projects {
+  width: 90%;
+  margin: auto;
+  min-height: 90vh;
+  @include flex(row, center, space-between);
+  text-align: center;
+  flex-wrap: wrap;
+  h2 {
+    margin: 5rem;
+  }
+}
+
+.travelly,
+.elena,
+.todo,
+.beatmaker {
+  flex: 1 1 40rem;
+}
+
+.beatmaker {
+  margin: 0 2rem 2rem 2rem;
+}
